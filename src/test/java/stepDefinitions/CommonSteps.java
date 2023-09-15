@@ -4,11 +4,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.thucydides.core.annotations.Steps;
+import net.serenitybdd.annotations.Steps;
 import pages.HomePage;
 import pages.LoginPage;
 
-public class CommonSteps {
+public class    CommonSteps {
     @Steps
     LoginPage login;
 

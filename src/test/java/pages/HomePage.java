@@ -9,16 +9,15 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage extends PageObject {
     @AndroidFindBy(xpath = "(//android.view.ViewGroup[@content-desc=\"test-ADD TO CART\"])[1]")
-    private WebElement labsBackpack;
+    private WebElementFacade labsBackpack;
 
     @AndroidFindBy(id = "(//android.view.ViewGroup[@content-desc=\"test-ADD TO CART\"])[2]/android.widget.TextView")
-    private WebElement labsBikeLight;
-
+    private WebElementFacade labsBikeLight;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"test-Cart\"]/android.view.ViewGroup/android.widget.TextView")
-    private WebElement cart;
+    private WebElementFacade cart;
+
     public void addToCart() {
-        clickOn(labsBackpack);
-        clickOn(labsBackpack);
+            clickOn(labsBackpack);
     }
 
     public String getCountCart(){

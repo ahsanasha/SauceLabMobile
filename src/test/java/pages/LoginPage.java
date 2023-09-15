@@ -13,9 +13,13 @@ public class LoginPage extends PageObject {
     @AndroidFindBy(accessibility = "test-LOGIN")
     private WebElement loginBtn;
 
+    @AndroidFindBy(accessibility = "test-Username")
+    private WebElement userName;
+
     public void enterValidUser() {
         typeInto(userName, PropertiesReader.getValidUser());
     }
+
     public void enterValidPass() {
         typeInto(password, PropertiesReader.getValidPassword());
     }
@@ -24,11 +28,8 @@ public class LoginPage extends PageObject {
         clickOn(loginBtn);
     }
 
-    @AndroidFindBy(accessibility = "test-Username")
-    private WebElement userName;
 
-
-    public void alreadyOnLoginPage(){
+    public void alreadyOnLoginPage() {
         waitFor(userName);
     }
 

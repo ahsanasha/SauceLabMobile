@@ -3,7 +3,7 @@ package stepDefinitions.buyProducts;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.thucydides.core.annotations.Steps;
+import net.serenitybdd.annotations.Steps;
 import org.junit.Assert;
 import pages.HomePage;
 
@@ -19,7 +19,7 @@ public class BuyProductSteps {
 
     @Then("Product will be added to the cart")
     public void productWillBeAddedToTheCart() {
-        Assert.assertEquals("2", homePage.getCountCart());
+        Assert.assertEquals("1", homePage.getCountCart());
     }
 
 

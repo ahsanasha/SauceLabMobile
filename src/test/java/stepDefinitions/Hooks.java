@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import net.serenitybdd.core.annotations.events.AfterScenario;
+import net.serenitybdd.core.annotations.events.BeforeScenario;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import utilities.AppiumServer;

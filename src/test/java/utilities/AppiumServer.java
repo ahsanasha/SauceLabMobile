@@ -23,11 +23,15 @@ public class AppiumServer {
         service = AppiumDriverLocalService.buildService(
                 new AppiumServiceBuilder().usingDriverExecutable(new File(PropertiesReader.getAppiumDriverPath()))
                         .withAppiumJS(new File(PropertiesReader.getAppiumJsPath()))
+//                        .withArgument(GeneralServerFlag.BASEPATH, "/wd/hub")
                         .withLogFile(new File(System.getProperty("user.dir") + "\\src\\test\\resources\\logs\\log.txt"))
-                        .withArgument(GeneralServerFlag.BASEPATH,"/wd/hub")
                         .withArgument(GeneralServerFlag.LOCAL_TIMEZONE));
 
-        service.start();
+        if (service.isRunning()) {
+            System.out.println("Appium sudah run");
+        } else {
+            service.start();
+        }
 
     }
 

@@ -49,11 +49,11 @@
             <version>${java.clent.version}</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>ch.qos.logback</groupId>-->
-<!--            <artifactId>logback-classic</artifactId>-->
-<!--            <version>1.4.7</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>ch.qos.logback</groupId>-->
+        <!--            <artifactId>logback-classic</artifactId>-->
+        <!--            <version>1.4.7</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -110,7 +110,6 @@
         </dependency>
 
 
-
     </dependencies>
 
     <build>
@@ -130,6 +129,8 @@
                 <!--                <artifactId>maven-failsafe-plugin</artifactId>-->
                 <!--                <version>3.0.0-M6</version>-->
                 <configuration>
+                    <parallel>methods</parallel>
+                    <threadCount>4</threadCount>
                     <includes>
                         <include>**/*.java</include>
                         <include>**/*Test.java</include>
@@ -138,8 +139,8 @@
                         <include>**/*Test.java</include>
                         <include>**/When*.java</include>
                     </includes>
-<!--                    <parallel>methods</parallel>-->
-<!--                    <useUnlimitedThreads>true</useUnlimitedThreads>-->
+                    <!--                    <parallel>methods</parallel>-->
+                    <!--                    <useUnlimitedThreads>true</useUnlimitedThreads>-->
                 </configuration>
                 <executions>
                     <execution>

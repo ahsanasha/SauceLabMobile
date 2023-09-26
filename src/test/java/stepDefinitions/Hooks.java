@@ -4,6 +4,7 @@ import net.serenitybdd.core.annotations.events.AfterScenario;
 import net.serenitybdd.core.annotations.events.BeforeScenario;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import utilities.AppiumServer;
 import utilities.PropertiesReader;
 
@@ -26,6 +27,8 @@ public class Hooks {
 
         AppiumServer.start();
         propertiesReader.initializeProperties();
+
+
 
     }
 

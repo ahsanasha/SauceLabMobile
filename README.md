@@ -5,11 +5,11 @@ This project shows Appium and Serenity framework integration to run sample test 
    [Tutorial Installation Java in Windows](https://www.petanikode.com/java-windows/)
 2. Download [Maven](https://maven.apache.org/download.cgi?Preferred=ftp://ftp.osuosl.org/pub/apache/)
 3. Install [Appium](https://appium.io/docs/en/2.0/quickstart/install/)
-4. Install [uiautomator2 driver](https://appium.io/docs/en/2.0/quickstart/uiauto2-driver/)
-5. Set env variable JAVA PATH
-6. Set env variable MAVEN PATH
-7. Set env variable APPIUM PATH
-8. Have a android device or emulator
+5. Install [uiautomator2 driver](https://appium.io/docs/en/2.0/quickstart/uiauto2-driver/)
+6. Set env variable JAVA PATH
+7. Set env variable MAVEN PATH
+8. Set env variable APPIUM PATH
+9. Have a android device or emulator
 
 `*If your computer already installed Java, Maven and Appium, you can skip all step.`
 ## This project run on
@@ -52,4 +52,15 @@ We can create new Page Object file in directory `src/test/java/pages`
 
 ```
 mvn clean verify
+```
+
+## Running Test Cases with spesific device
+
+```
+mvn clean verify -Dproperties=android2.properties
+```
+## Running Test Cases with tags and spesific device
+
+```
+mvn clean verify -Dtags=invalidCredentials -Dproperties=android2.properties 
 ```
